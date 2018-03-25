@@ -5,6 +5,7 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 export class TodoService {
   toDoList: AngularFireList<any>;
   constructor(private firebasedb: AngularFireDatabase) { }
+  
 
   getToDoList() {
     this.toDoList = this.firebasedb.list(`titles`);
